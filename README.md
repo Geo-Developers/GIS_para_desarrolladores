@@ -195,13 +195,11 @@ Dentro de esta categoría tenemos varios tipos en función de como se obtiene la
 - FMV
 - Categórica
 - Científica
-- [Elevación](https://www.youtube.com/watch?v=0UwgPOAkx-c) / LIDAR
+
 
 ![Proceso de obtención de imágenes](./data/imagery_schema.png)
 
-[Vídeo de nube de puntos LIDAR](https://www.esri.com/videos/watch?videoid=3sQ-0ePc35Q)
 
-[Valencia Urban Planning 2018](http://preventas.maps.arcgis.com/home/webscene/viewer.html?webscene=f268cecdb30e41f992f83d27b11a9e40)
 
 
 > Como curiosidad podéis ver esta [demo](https://maps.esri.com/rc/landsat-viewer/index.html#) para haceros una idea del proceso.
@@ -246,6 +244,12 @@ Dependiendo del tipo de estudio que se quiera hacer, a veces se emplean las imá
 - Puntos
 - Líneas
 - Polígonos
+- Nubes de Puntos ([Elevación](https://www.youtube.com/watch?v=0UwgPOAkx-c) / LIDAR)
+
+[Vídeo de nube de puntos LIDAR](https://www.esri.com/videos/watch?videoid=3sQ-0ePc35Q)
+
+[Valencia Urban Planning 2018](http://preventas.maps.arcgis.com/home/webscene/viewer.html?webscene=f268cecdb30e41f992f83d27b11a9e40)
+
 
 [Lista de Objetos Geométricos](https://developers.arcgis.com/documentation/common-data-types/geometry-objects.htm)
 
