@@ -1,4 +1,4 @@
-# ¿Qué significa el término GIS? 
+# ¿Qué significa el término GIS?
 
 El término significa **Geographic Information Systems**, (**SIG** en castellano)
 
@@ -25,7 +25,7 @@ Pues en realidad podríamos hacer una lista infinita. Pero mejor os dejo un enla
 
 [Aplicaciones del GIS](https://gisgeography.com/gis-applications-uses/)
 
-# ¿Cómo funciona un GIS y qué tipo de información maneja? 
+# ¿Cómo funciona un GIS y qué tipo de información maneja?
 
 Una imagen vale más que mil palabras.
 
@@ -62,7 +62,7 @@ Para entender un sistema de referencia, vamos a usar la siguiente imagen:
 Cualquier sistema de referencia se compone de dos partes:
 
 - Elipsoide
-- Datum 
+- Datum
 
 #### Elipsoide
 
@@ -70,12 +70,12 @@ Podemos definirlo como la formulación matemática del **Geoide** (la forma que 
 
 #### Datum
 
-Es un conjunto de puntos de referencia en la superficie terrestre con los cuales las medidas de la posición son tomadas y un modelo asociado de la forma de la tierra (elipsoide de referencia). 
+Es un conjunto de puntos de referencia en la superficie terrestre con los cuales las medidas de la posición son tomadas y un modelo asociado de la forma de la tierra (elipsoide de referencia).
 
 Más adelante cuando veamos los **sistemas de coordenadas** veremos que hay dos tipos de datums:
 
 - Horizontales
-- Verticales 
+- Verticales
 
 > Aquí puedes consultar algunos de ellos, para hacerte una idea [Lista de Elipsoides y Datums](https://www.globalsecurity.org/military/library/policy/usmc/mcwp/3-16-7/draft_appa.pdf)
 
@@ -83,7 +83,7 @@ Más adelante cuando veamos los **sistemas de coordenadas** veremos que hay dos 
 
 ### ¿Por qué hay distintos sistemas de Referencia?
 
-Cada país suele escoger el sistema de referencia que más se ajuste a su territorio. 
+Cada país suele escoger el sistema de referencia que más se ajuste a su territorio.
 
 #### Sistema de Referencia oficial en España
 
@@ -106,13 +106,13 @@ Aunque están basados en distintos elipsoides, la diferencia es conocida, con lo
 
 
 
-#### ¿Cómo hago para transformar mis datos si los tengo en un sistema de referencia distinto? 
+#### ¿Cómo hago para transformar mis datos si los tengo en un sistema de referencia distinto?
 
-Aquí es donde empieza a liarse la cosa. 
+Aquí es donde empieza a liarse la cosa.
 
 Por un lado necesitamos identificar unívocamente cada sistema de referencia. Y el problema es que nos vamos a encontrar varias nomenclaturas:
 
-- [EPGS](http://www.epsg.org/) 
+- [EPGS](http://www.epsg.org/)
 - [WKID y WKT](http://spatialreference.org/)
 
 > En la mayoría de Software para producción cartográfica, a la hora de cargar capas de información, debéis aseguraros de que todas las capas estén en el mismo sistema de referencia y proyección, para que el estudio sea coherente y no haya errores.
@@ -137,7 +137,7 @@ Para localizar la elevación de un punto.
 
 ### Proyecciones
 
-Las proyecciones son la consecuencia de querer identificar en un plano cualquier punto del planeta (una esfera). Esto necesariamente supone una distorsión. Y aquí viene lo que para mucha gente pasa desapercibido.
+Las proyecciones son la consecuencia de querer identificar en un plano cualquier punto del planeta (algo aproximado a una esfera, aunque está achatada por los polos). Esta operación siempre supone una distorsión. Y aquí viene lo que para mucha gente pasa desapercibido.
 
 
 Los mapas que vemos habitualmente en la web,usan una proyección llamada **Mercator**, que altera la percepción del tamaño de los países.
@@ -155,7 +155,7 @@ Lo que creo que es más importante recordar respecto a las proyecciones es que e
 - Forma
 - Área
 - [Distancia](http://ekenes.github.io/esri-js-samples/ge-length/)
-- Dirección 
+- Dirección
 
 y a partir de ahí escoger una proyección adecuada a esa propiedad.
 
@@ -174,7 +174,7 @@ y a partir de ahí escoger una proyección adecuada a esa propiedad.
 
 > Aquí tienes una [lista](https://es.wikipedia.org/wiki/Anexo:Cronolog%C3%ADa_de_las_proyecciones_cartogr%C3%A1ficas) de los tipos de proyecciones.
 
-## Fuentes de Datos GIS 
+## Fuentes de Datos GIS
 
 Ahora que hemos visto como georeferenciar puntos del planeta, es interesante el ver cómo obtenemos los datos y qué tipo de datos se emplean en el GIS.
 
@@ -192,10 +192,10 @@ Dentro de esta categoría tenemos varios tipos en función de como se obtiene la
 
 - Óptico
 - Radar
-- FMV 
+- FMV
 - Categórica
 - Científica
-- [Elevación](https://www.youtube.com/watch?v=0UwgPOAkx-c) / LIDAR 
+- [Elevación](https://www.youtube.com/watch?v=0UwgPOAkx-c) / LIDAR
 
 ![Proceso de obtención de imágenes](./data/imagery_schema.png)
 
@@ -249,7 +249,7 @@ Dependiendo del tipo de estudio que se quiera hacer, a veces se emplean las imá
 
 [Lista de Objetos Geométricos](https://developers.arcgis.com/documentation/common-data-types/geometry-objects.htm)
 
-Muchas veces oirás hablar de los **Vector Tiles**. Generalmente todo lo que tenga que ver con entidades, (aunque también los mapas base) encajan en esta categoría. 
+Muchas veces oirás hablar de los **Vector Tiles**. Generalmente todo lo que tenga que ver con entidades, (aunque también los mapas base) encajan en esta categoría.
 
 [Especificación original de los Vector Tiles](https://github.com/mapbox/vector-tile-spec)
 
@@ -266,11 +266,11 @@ Muchas veces oirás hablar de los **Vector Tiles**. Generalmente todo lo que ten
 
 Una vez que tenemos un conjunto de datos geocodificados, las tablas se suelen usar como información añadida de las propiedades de un elemento, para dar más contexto.
 
-Hay ciertos formatos de ficheros, en los que esa información ya viene embebida, como GeoJSON. 
+Hay ciertos formatos de ficheros, en los que esa información ya viene embebida, como GeoJSON.
 
 >  Tanto la información vectorial como la tabular se encuentra generalmente dentro de una **geodatabase** y se consume vía API REST.
 
-### Servicios 
+### Servicios
 
 - WFS
 - WMS
@@ -311,4 +311,3 @@ Muchos de estos servicios están estandarizados por la [OGC](http://www.opengeos
 [Canal de Youtube de GeoDevelopers](https://www.youtube.com/channel/UC5Kegds6aV88wjdAhqQ5Wsg)
 
 [Awesome Arcgis](https://esri-es.github.io/awesome-arcgis/)
-
